@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #87CEEB; /* Sky blue background */
+  }
+  
+  .sky {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+  }
+  
+  .cloud {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    top: 20%;
+    animation: float 20s linear infinite;
+  }
+  
+  .cloud:nth-child(2) {
+    width: 150px;
+    height: 80px;
+    top: 10%;
+    left: 50%;
+    animation-duration: 25s;
+  }
+  
+  @keyframes float {
+    0% {
+      left: -200px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .road {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(black, black) center/100% 10px no-repeat,
+                linear-gradient(white 50%, black 50%) center/100% 20px no-repeat;
+    background-color: #606060;
+    overflow: hidden;
+  }
+  
+  .car {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: drive 5s linear infinite;
+  }
+  
+  .car-body {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background: red;
+    border-radius: 10px 10px 0 0;
+    top: 10px;
+  }
+  
+  .wheel {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    top: 35px;
+  }
+  
+  .front-wheel {
+    left: 10px;
+  }
+  
+  .back-wheel {
+    right: 10px;
+  }
+  
+  .tree {
+    position: absolute;
+    width: 20px;
+    height: 60px;
+    background: green;
+    left: 100%;
+    bottom: 20px;
+    animation: moveTree 3s linear infinite;
+  }
+  
+  .tree:nth-child(2) {
+    left: 80%;
+    animation-duration: 4s;
+  }
+  
+  @keyframes drive {
+    0% {
+      left: -100px;
+    }
+    100% {
+      left: calc(100% + 100px);
+    }
+  }
+  
+  @keyframes moveTree {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -20px;
+    }
+  }
+  
